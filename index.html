@@ -1,0 +1,103 @@
+<!-- Este programa será comentado de acordo com a aula para que o mesmo fique didático com o objetivo de pontencializar o aprendizado -->
+<!-- Foi instalado a extensão Live Server que serve para que as alterações atualizem em tempo real -->
+<!-- Foi instalado a extensão Auto Rename Tag para otimizar o tempo pois esta automaticamente altera a tag de fechamento quando alterada na tag de abertura e vice-versa -->
+
+<!-- Utilizado o Emmet que é uma ferramenta do VScode que gera a estrutura de acordo com o atalho -->
+<!DOCTYPE html> <!--O DOCTYPE indica que o documento é html:5-->
+<html lang="pt-br"> <!--O lang = language, informa a linguagem da página-->
+<head> <!--O head informa as instruções que coordena as informações mais vinculadas as configurações-->
+    <meta charset="UTF-8"> <!--O charset="UTF-8" é o padrão para poder aceitar caracteres acentuados-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="Style/main.css"> <!--Referência CSS-->
+    
+    <!-- responsividade -->
+    <link rel="stylesheet" href="/Style/owl/responsive.css">
+
+    <!-- owl css -->
+    <link rel="stylesheet" href="Style/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="Style/owl/owl.theme.default.min.css">
+    
+    
+    <title>NETFLIX TWIN</title>
+</head>
+<body> <!--O body é responsável pelo corpo do site, onde ficam todas as coisas-->
+    <!--tudo no html é feito com div, ,todo elemento que é visualizado no view port (tela) é em formato de caixa. tag semântica, são mais para entender a estrutura visual pois o código vai ser compreendido pela máquina como div, ex: header -->
+    <header>
+        <div class="container">
+            <h2 class="logo">NETFLIX</h2>
+            <nav> <!--O nave é uma tag semântica que geralmente é usada para criar menus de navegação-->
+                <a href="#">Início</a> <!--Dica: pressiona Alt+Shift+ArrowDown para clonar a linha selecionada-->
+                <a href="#">Séries</a> <!--Dica: pressiona Alt+Shift+ArrowDown para clonar a linha selecionada-->
+                <a href="#">Filmes</a> <!--Dica: pressiona Alt+Shift+ArrowDown para clonar a linha selecionada-->
+                <a href="#">Documentários</a> <!--Dica: pressiona Alt+Shift+ArrowDown para clonar a linha selecionada-->
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+        <div role="button" class="filme-principal"> <!-- É possivel criar uma classe de froma rápida utilizando div.nome da classe que a linha de código é gerada -->
+            <div class="container"> <!--O role padroniza o papel do elemento para todas as aplicações-->
+                <h3 class = "titulo"> THE BIG BANG THEORY</h3>
+                <p class="descricao">Leonard e Sheldon são dois jovens cientistas que moram juntos, sabem tudo de física, mas não parecem saber como se relacionar com mulheres. Seus únicos amigos são Howard e Rajesh, mas tudo pode mudar quando conhecem a nova vizinha, a bela Penny, que logo encanta Leonard.</p>
+                <div class="botoes"> 
+                    <button class="botao">
+                        <i class="fas fa-play"></i> <!-- icone awesome -->
+                        <a href="https://www.linkedin.com/in/allan-willian/" target="_blank">ASSISITR AGORA</a>
+                    </button>
+                    <button class="botao">
+                        <i class="fas fa-info-circle"></i> <!-- icone awesome -->
+                        <a href="https://www.linkedin.com/in/allan-willian/" target="_blank">MAIS INFORMAÇÕES</a>
+                    </button>
+                </div>
+            </div> 
+        </div>     
+    </main>
+
+    <div class="carrosel-filmes">
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <img class="box-filme" src="img/mini1.jpg" alt="" srcset="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini2.jpg" alt="" srcset="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini3.jpg" alt="" srcset="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini4.jpg" alt="" srcset="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini5.jpg" alt="" srcset="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini6.jpg" alt="" srcset="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini7.jpg" alt="" srcset="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini8.jpg" alt="" srcset="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini9.jpg" alt="" srcset="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini10.jpg" alt="" srcset="">
+            </div>
+        </div>
+    </div>
+
+<!-- o $ siginifica jQwery no JavaScript -->
+
+
+    <script src="https://kit.fontawesome.com/3113fc9207.js" crossorigin="anonymous"></script>
+    <!-- Fonte awesome permite criar icones no html, na linguagem JavaScript  -->
+    <script src="js/owl/jquery.min.js"></script>
+    <script src="js/owl/owl.carousel.min.js"></script>
+    <script src="js/owl/setup.js"></script>
+
+
+</body>
+</html> 
