@@ -1,0 +1,153 @@
+/* O html é responsável pela estrutura e conteúdo enquanto o CSS é mais responsável pela formatação */
+/* O CSS precisa ser referenciado no código html para que seja aplicado efetivamente */
+/* Técnica Reset CSS, usa-se o *, esta tem o objetivo de padronizar margin, padding, border, entre outros elementos que variam de navegador para navegador */
+
+/* Para declarar variáveis no CSS é necessário definir dentro da raiz do documento, ou seja, dentro do elemento root */
+
+:root{ /*Essa prática de referenciar as cores optimiza tempo em possíveis formatações que podem ocorrer ao longo da programação*/
+    --vermelho: #E50914;
+    --preta: #141414;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*O box-sizing: border-box garante um limite para a borda da caixa*/
+}
+
+
+/* Elementos base */
+body{
+    background: var(--preta);
+    font-family: 'arial', 'Times New Roman', Times, serif;
+    color: white;
+}
+
+
+/* A tag html no CSS é definida pelo proprio nome, já para classe (algo que esta sendo criado) é referenciado por meio do . */
+
+header .container{
+    display: flex; /* Alinha incrementos em tela no flex box, com padrão de flex-direction que já vem como padrão */
+    flex-direction: row;
+    align-items: center; /* Alinha verticamelmente os elementos */
+    justify-content: space-between; /*Alinha os elementos na horizontal, obs: o space-between jogou os elementos para outra borda, por isso comentei esta linha de codigo e utilizei margin right no .logo*/
+}
+
+header .logo{
+    margin-left: 10px;
+    /* margin-right: 250px; */
+    color: var(--vermelho);
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+}
+
+header nav a{ /* Busca o elemento ancora nav */
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+}
+
+header nav a:hover{ /* houver altera quando o mouse estiver sobre o elemento */
+    color: #fff;
+}
+
+/* Filme Principal */
+
+.filme-principal{
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%), url("../img/capa-the-big-bang.jpg"); /* rgba = red, green, blue and alfa */ 
+    /* imagens coletadas no TMDB - The Movie Data Base */
+
+    height: 400px;
+    background-size: cover; /* Especifica o tamanho da imagem no background */
+
+    display: flex;
+    flex-direction: column; /* O justify-contente sempre segue a direção do flex direction */
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-principal .descricao{
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.filme-principal .titulo{
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+.botao{
+    background-color: rgba(0, 0, 0, .50);
+    border: none;
+    color: white;
+
+    padding: 15px 30px; /*O primeiro valor de padding, se apenas digitado este, formatara todos os lados, se digitado dois valores começará a formatar em cima e embaixo, e o segundo valor para os dois lados (a formatação é sempre no sentido horário)*/
+    margin-right: 15px;
+    font-size: 12px;
+
+    cursor: pointer;
+    transition: 0.5s ease all; /*Permite inserir transição no elemento*/
+}
+
+.botao:hover{
+    background-color: white;
+    color: black;
+    
+}
+
+.botao i{
+    margin-right: 8px;
+}
+
+/* Incremento de links para ativar o botão assistir e mais informações que direciona para o meu linkedin */
+
+
+
+.botoes a{
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, .50);
+    color: white;
+    border: none;
+    padding: 15px; /*O primeiro valor de padding, se apenas digitado este, formatara todos os lados, se digitado dois valores começará a formatar em cima e embaixo, e o segundo valor para os dois lados (a formatação é sempre no sentido horário)*/
+    margin: 0;
+
+
+    cursor: pointer;
+    transition: 0.5s ease all; /*Permite inserir transição no elemento*/
+}
+
+
+.botoes a:hover{
+    background-color: white;
+    color: black;
+    
+}
+
+.container{
+    margin-left: 30px;
+}
+
+.filme-principal .container{
+    /* margin-top: 50px; */
+    width: 70%; /* width limitação de largura, faz com que  */
+   /*  text-align: justify; */
+}
+/* WRAPPER = ENVELOPAR, neste projeto o container é um Wrapper, embora em outros contextos esses conceitos podem ser diferentes */
+/* o WRAPPER é uma classe(ou div) que guarda vários outros elementos, dos vários motivos um deles é pq fica mais facil manipular os elementos filhos */
+
+/* Plugin Owl Carrousel 2 - ferramenta que usa jQuery */
+
+
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carrosel-filmes{
+    margin-top: 5px;
+}
